@@ -1,0 +1,21 @@
+body {
+    background-color: gray;
+}
+
+.col-container {
+    display: flex;
+}
+
+.col1 {
+    background-color: yellow;
+    width: 300px;
+    padding-left: 10px;
+    padding-right:10px;
+}
+
+.col2 {
+    background-color: red;
+    width: calc(100%- 300px);
+    padding-left: 10px;
+    padding-right:10px;
+}

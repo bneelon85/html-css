@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Introducing Apex Ping</title>
+  <link href="medium.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="nav">
+    <img src="https://cdn-images-1.medium.com/fit/c/36/36/1*vuI-_jiQwT3ZXbTO_nDopQ.png?source=logoAvatar-lo_5a6a4a4d1d2b---10d9e198763" alt="Apex">
+  </div>
+  <div class="content">
+    <div class="profile">
+      <img class="profile-img" src="https://cdn-images-1.medium.com/fit/c/60/60/0*N5_gFLxHuK0nzh6y.jpeg">
+      <div class="profile-info">
+        TJ Holowaychuk <span class="follow">Follow</span>
+        <img class="twitter" src="twitter.png" alt="Twitter"><br> Code. Photography. Art.<br> Jun 16, 2016 • 7 min read
+      </div>
+    </div>
+    <h1>Introducing Apex Ping</h1>
+    <p>
+      I’d like to introduce Apex Ping! A minimalistic, but powerful uptime & performance monitoring service for websites and APIs. In this post I’ll cover features of Apex Ping, why I chose to build it first, and a few things I learned in the process. In future
+      posts I’ll be detailing the implementation for anyone who is curious.
+    </p>
+    <p>
+      I soft-launched Ping about a month ago, built almost 100% on AWS Lambda, with 500 users it has already detected over a million errors, and performed over 25 million checks. Big thanks to the early adopters who have checked it out!
+    </p>
+    <img class="big-image" src="tj_blog_img1.png">
+    <h2>The product</h2>
+    <p>
+      I've seen first-hand how embarrassing it can bee when customers find out your product is having issues before you do, naturally this can translate to customers bailing on your product. Ensuring your site, app, or API is stable and performant is critical.
+    </p>
+    <p>
+      Apex Ping helps by making sure your team is notified when there's a performance regression, or when your end-point is down or unresponsive. Often people rely on "it works for me", but Apex Ping's reporting can help uncover the full story.
+    </p>
+    <h3>Powerful monitoring</h3>
+    <p>
+      Unlike other uptime monitoring services, which only support HEAD requests, Apex Ping support header fields and bodies as well. This allows you to test APIs, caching behavior, and serving time, as well as the typical connection latency.
+    </p>
+    <p>
+      The checks listing displays the uptime, mean response, Apdex score, and Apdex score throughout the day, week, or month. The Apdex score generalizes the user experience, summarizing response time satisfaction and error responses.
+    </p>
+    <img class="big-image" src="tj_blog_img2.png">
+    <h3>Global checks</h3>
+    <p>
+      Requests or "checks" are performed froma number of selectable PoPs (Point of Presence), giving you a glance at the customer experience all over the world. Hovering a PoP provides you with the breakdown, and coloring indicates their relative health so you can instantly see if a region's availability or performance is degraded.
+    </p>
+    <img class="big-image" src="tj_blog_img3.png">
+        <h3>Latency Distribution</h3>
+    <p>
+      When latency is a reflection of the user-experience, it's important not to ignore the outliers. The Latency view provides you with an intuitive look at distribution throughout the selected time period, where the intensity of the heatmap represents the number of check's within the given duration.
+    </p>
+    <img class="big-image" src="tj_blog_img4.png">
+        <h3>Errors & Apdex</h3>
+    <p>
+      The Apdex (Application Performance Index) score quantifies the user-experience based on a configured target latency. It effectively lets you know how far you are from hitting your mark, you should strive for a perfect 1.0!
+    </p>
+    <img class="big-image" src="tj_blog_img5.png">
+  </div>
+</body>
+
+</html>
